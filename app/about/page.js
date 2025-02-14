@@ -3,8 +3,6 @@ import about2 from "@/public/about-2.jpg";
 import Image from "next/image";
 import { getCabins } from "../_lib/data-service";
 
-export const revalidate = 60 * 60 * 24;
-
 export default async function Page() {
   const cabins = await getCabins();
   const len = cabins.length;
